@@ -1,0 +1,18 @@
+{
+    "builds": [
+      {
+        "src": "main.py",
+        "use": "@vercel/python",
+        "config": {
+          "pythonVersion": "3.9",
+          "PythonLSPServer": "pylsp"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "main.py"
+      }
+    ]
+  }
